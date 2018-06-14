@@ -9,13 +9,6 @@ Msg_Subject = input("Please enter the subject: ")
 
 
 
-'''
-User_Name = input("Please enter your email: ")
-while not User_Name.isalnum():
-    print("You must enter only alphanumeric characters, try again...")
-    User_Name = input("Please enter your email: ")
-'''
-
 Passwd_Mail = getpass.getpass("Please enter your password: ")
 Server_Mail = smtplib.SMTP('smtp.gmail.com',587)
 
