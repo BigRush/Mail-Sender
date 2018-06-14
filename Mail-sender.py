@@ -17,7 +17,7 @@ while not User_Name.isalnum():
 '''
 
 Passwd_Mail = getpass.getpass("Please enter your password: ")
-Server_Mail = smptlib.SMTP("smpt.gmail.com",587)
+Server_Mail = smtplib.SMTP('smtp.gmail.com',587)
 
 Server_Mail.starttls()
 
