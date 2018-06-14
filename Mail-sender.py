@@ -3,13 +3,14 @@
 import smtplib
 import getpass
 
-
+User_Mail = input("Please enter your email: ")
 Rec_Mail = input("Please enter the recipient's mail: ")
 Msg_Subject = input("Please enter the subject: ")
-Msg_Content = input("Please enter your message: ")
-User_Mail = input("Please enter your email: ")
-User_Name = input("Please enter your email: ")
+
+
+
 '''
+User_Name = input("Please enter your email: ")
 while not User_Name.isalnum():
     print("You must enter only alphanumeric characters, try again...")
     User_Name = input("Please enter your email: ")
@@ -20,10 +21,9 @@ Server_Mail = smptlib.SMTP("smpt.gmail.com",587)
 
 Server_Mail.starttls()
 
-
-
 Server_Mail.login(User_Mail, Passwd_Mail)
 
-Server_Mail.sendmail(Rec_Mail, Msg_Content)
+Msg_Content = input("Please enter your message: ")
+Server_Mail.sendmail(User_Mail, Rec_Mail, Msg_Content)
 
 Server_Mail.quit()
